@@ -7,56 +7,32 @@ SRGAN (Super Resolution Generative Adversarial Network)のkerasを用いた実�
  Christian Ledig, Lucas Theis, Ferenc Huszar, Jose Caballero, Andrew Cunningham, Alejandro Acosta, Andrew Aitken, Alykhan Tejani, Johannes Totz, Zehan Wang, Wenzhe Shi; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 4681-4690
  
 # DEMO
+ サーモカメラを用いて高解像度化を行った例．  
+ 学習には自前のサーモ画像データセットを使用した．
  
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
- ![Alt text](/path/to/img.jpg)
- 
+左の画像：高解像度化前  
+右の画像：高解像度化後
+
+<img src=https://user-images.githubusercontent.com/84695613/119312493-67192f80-bcad-11eb-8908-f662048d3387.png widh=320px height=240px> &nbsp;  <img src="https://user-images.githubusercontent.com/84695613/119312526-70a29780-bcad-11eb-99a4-618aec0aecd3.png" widh=320px height=240px>
+
+
 # Features
  
-"hoge"のセールスポイントや差別化などを説明する
+ 160×120pxの入力画像を，640×480pxに拡大して出力する．
  
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
-* huga 3.5.2
-* hogehuga 1.0.2
- 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
+* keras　2.2.4
+* tensorflow-gpu　1.14.0
  
 # Usage
  
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+### 学習  
+学習用画像をtrainフォルダに入れる．画像サイズは640×480px．  
+epochs: エポック数  
+batch_size:　バッチサイズ  
+interval:　h5ファイルを出力する間隔．intervalで指定したepoch数が経過するごとにh5ファイルを保存する．  
  
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
 ```
- 
-# Note
- 
-注意点などがあれば書く
- 
-# Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
- 
-# License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+train(epochs = 3000, batch_size = 1, interval = 300)
+```
