@@ -1,9 +1,10 @@
 # SRGAN
 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
- 
-"hoge"が何かを簡潔に紹介する
- 
+SRGAN (Super Resolution Generative Adversarial Network)のkerasを用いた実装．
+
+参考論文
+"Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network"
+ Christian Ledig, Lucas Theis, Ferenc Huszar, Jose Caballero, Andrew Cunningham, Alejandro Acosta, Andrew Aitken, Alykhan Tejani, Johannes Totz, Zehan Wang, Wenzhe Shi; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2017, pp. 4681-4690
 # DEMO
  
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
